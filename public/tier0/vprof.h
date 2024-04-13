@@ -48,6 +48,8 @@
 #pragma comment( lib, "Xapilibi" )
 #endif
 
+#define VPROF_ENABLED	//开启VPROF
+
 //-----------------------------------------------------------------------------
 //
 // Profiling instrumentation macros
