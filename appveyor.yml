@@ -28,8 +28,9 @@ for:
     build_script:
     - cmd: >-
         ./waf install
-
+        tree
+        cd ..
 after_build:
   # Create archive
-  - 7z a -t7z amxmodx_mm.7z -m0=lzma2 -mx=9 -mfb=64 -md=32m -ms=on c:\projects\构建完毕
-  - appveyor PushArtifact ok.7z
+  - 7z a -t7z buildok.7z -m0=lzma2 -mx=9 -mfb=64 -md=32m -ms=on c:\projects\构建完毕
+  - appveyor PushArtifact buildok.7z
