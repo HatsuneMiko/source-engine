@@ -20,12 +20,13 @@ for:
     - cmd: >-
         git submodule update --init --recursive
         
+        ./waf configure -T release -d --build-game=cstrike --32bits --prefix=../构建完毕
+    
 # cache:
 #   - c:\projects\*.zip -> appveyor.yml
 #   - c:\projects\mysql-5.5 -> appveyor.yml
     build_script:
     - cmd: >-
-        ./waf configure -T release -d --build-game=cstrike --32bits --prefix=../构建完毕
         ./waf install
 
 after_build:
