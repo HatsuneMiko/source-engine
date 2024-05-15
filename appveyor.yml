@@ -28,7 +28,6 @@ for:
     build_script:
     - cmd: >-
         ./waf install
-        ls
         cd ..
 after_build:
   # Create archive
