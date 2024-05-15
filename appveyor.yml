@@ -26,7 +26,7 @@ for:
     build_script:
     - cmd: >-
         ./waf configure -T release -d --build-game=cstrike --32bits --prefix=../构建完毕
-        ./waf
+        ./waf install
 
 after_build:
   # Create archive
