@@ -28,7 +28,7 @@ for:
     build_script:
     - cmd: >-
         ./waf install
-        tree
+        ls
         cd ..
 after_build:
   # Create archive
