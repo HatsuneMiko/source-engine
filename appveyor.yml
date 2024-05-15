@@ -20,7 +20,7 @@ for:
     - cmd: >-
         git submodule update --init --recursive
         
-        ./waf configure -T release -d --build-game=cstrike --32bits --prefix=../buildok
+        ./waf configure -T release --build-game=cstrike --32bits --prefix=../buildok
     
 # cache:
 #   - c:\projects\*.zip -> appveyor.yml
