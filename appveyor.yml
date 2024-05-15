@@ -20,7 +20,7 @@ for:
     - cmd: >-
         git submodule update --init --recursive
         
-        ./waf configure -T release -d --build-game=cstrike --32bits --prefix=../构建完毕
+        ./waf configure -T release -d --build-game=cstrike --32bits --prefix=../buildok
     
 # cache:
 #   - c:\projects\*.zip -> appveyor.yml
@@ -30,5 +30,5 @@ for:
         ./waf install
 after_build:
   # Create archive
-  - 7z a -t7z buildok.7z -m0=lzma2 -mx=9 -mfb=64 -md=32m -ms=on c:\projects
+  - 7z a -t7z buildok.7z -m0=lzma2 -mx=9 -mfb=64 -md=32m -ms=on c:\projects\buildok
   - appveyor PushArtifact buildok.7z
